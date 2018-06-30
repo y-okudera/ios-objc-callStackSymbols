@@ -15,6 +15,7 @@
 		B66FEF7920E7EE3700C614E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B66FEF7820E7EE3700C614E0 /* main.m */; };
 		B66FEF8320E7EE3700C614E0 /* ios_objc_callStackSymbolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B66FEF8220E7EE3700C614E0 /* ios_objc_callStackSymbolsTests.m */; };
 		B66FEF8E20E7EE3700C614E0 /* ios_objc_callStackSymbolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B66FEF8D20E7EE3700C614E0 /* ios_objc_callStackSymbolsUITests.m */; };
+		B66FEF9F20E7F3BD00C614E0 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = B66FEF9E20E7F3BD00C614E0 /* Logger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B66FEF8920E7EE3700C614E0 /* ios-objc-callStackSymbolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-objc-callStackSymbolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66FEF8D20E7EE3700C614E0 /* ios_objc_callStackSymbolsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_objc_callStackSymbolsUITests.m; sourceTree = "<group>"; };
 		B66FEF8F20E7EE3700C614E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66FEF9D20E7F3BD00C614E0 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		B66FEF9E20E7F3BD00C614E0 /* Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		B66FEF6820E7EE3500C614E0 /* ios-objc-callStackSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				B66FEF9C20E7F2E800C614E0 /* Helpers */,
 				B66FEF6920E7EE3500C614E0 /* AppDelegate.h */,
 				B66FEF6A20E7EE3500C614E0 /* AppDelegate.m */,
 				B66FEF6C20E7EE3500C614E0 /* ViewController.h */,
@@ -130,6 +134,15 @@
 				B66FEF8F20E7EE3700C614E0 /* Info.plist */,
 			);
 			path = "ios-objc-callStackSymbolsUITests";
+			sourceTree = "<group>";
+		};
+		B66FEF9C20E7F2E800C614E0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B66FEF9D20E7F3BD00C614E0 /* Logger.h */,
+				B66FEF9E20E7F3BD00C614E0 /* Logger.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +278,7 @@
 				B66FEF6E20E7EE3500C614E0 /* ViewController.m in Sources */,
 				B66FEF7920E7EE3700C614E0 /* main.m in Sources */,
 				B66FEF6B20E7EE3500C614E0 /* AppDelegate.m in Sources */,
+				B66FEF9F20E7F3BD00C614E0 /* Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				INFOPLIST_FILE = "ios-objc-callStackSymbols/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				INFOPLIST_FILE = "ios-objc-callStackSymbols/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
