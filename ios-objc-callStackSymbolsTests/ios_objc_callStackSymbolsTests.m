@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Logger.h"
 
 @interface ios_objc_callStackSymbolsTests : XCTestCase
 
@@ -24,16 +25,26 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testCallStackSymbols {
+    [self sample1];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)sample1 {
+    [self sample2];
+}
+
+- (void)sample2 {
+    [self sample3];
+}
+
+- (void)sample3 {
+
+    NSArray <NSString *> *callStackSymbols = [Logger callStackSymbols].copy;
+    XCTAssertEqual(callStackSymbols.count, 4);
+    XCTAssertEqualObjects(callStackSymbols[0], @"[ios_objc_callStackSymbolsTests sample3]");
+    XCTAssertEqualObjects(callStackSymbols[1], @"[ios_objc_callStackSymbolsTests sample2]");
+    XCTAssertEqualObjects(callStackSymbols[2], @"[ios_objc_callStackSymbolsTests sample1]");
+    XCTAssertEqualObjects(callStackSymbols[3], @"[ios_objc_callStackSymbolsTests testCallStackSymbols]");
 }
 
 @end
