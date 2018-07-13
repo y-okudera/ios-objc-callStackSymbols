@@ -1,5 +1,5 @@
 //
-//  Logger.h
+//  DebugLog.h
 //  ios-objc-callStackSymbols
 //
 //  Created by YukiOkudera on 2018/07/01.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Logger : NSObject
+@interface DebugLog : NSObject
 
 + (NSArray <NSString *> *)callStackSymbols;
 @end
