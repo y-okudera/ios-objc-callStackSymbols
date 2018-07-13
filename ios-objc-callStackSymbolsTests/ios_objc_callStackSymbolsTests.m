@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Logger.h"
+#import "DebugLog.h"
 
 @interface ios_objc_callStackSymbolsTests : XCTestCase
 
@@ -39,7 +39,7 @@
 
 - (void)sample3 {
 
-    NSArray <NSString *> *callStackSymbols = [Logger callStackSymbols].copy;
+    NSArray <NSString *> *callStackSymbols = [DebugLog callStackSymbols].copy;
     XCTAssertEqual(callStackSymbols.count, 4);
     XCTAssertEqualObjects(callStackSymbols[0], @"[ios_objc_callStackSymbolsTests sample3]");
     XCTAssertEqualObjects(callStackSymbols[1], @"[ios_objc_callStackSymbolsTests sample2]");

@@ -1,14 +1,14 @@
 //
-//  Logger.m
+//  DebugLog.m
 //  ios-objc-callStackSymbols
 //
 //  Created by YukiOkudera on 2018/07/01.
 //  Copyright © 2018年 YukiOkudera. All rights reserved.
 //
 
-#import "Logger.h"
+#import "DebugLog.h"
 
-@implementation Logger
+@implementation DebugLog
 
 + (NSArray <NSString *> *)callStackSymbols {
 
